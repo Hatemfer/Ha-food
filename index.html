@@ -5,90 +5,234 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Ha'food</title>
-    <script src="https://kit.fontawesome.com/433a0d7032.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="path/to/boxicons.css">
-    <link rel="icon" href="images/HAFoodLogo.png" type="image/x-icon">
+    <script
+      src="https://kit.fontawesome.com/433a0d7032.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="path/to/boxicons.css" />
+    <link rel="icon" href="images/HAFoodLogo.png" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
-  <body>  
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bx bx-up-arrow-alt"></i></button>
+  <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <i class="bx bx-up-arrow-alt"></i>
+    </button>
+    <!-- The Modal -->
+    <div id="myModal">
+      <div id="modalContent">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <!-- <div id="modalData"> -->
 
+        <h2 class="order-title">Order Details</h2>
+
+        <!-- Client Information -->
+        <div class="clientInfo">
+          <input
+            class="order-input"
+            type="text"
+            id="clientName"
+            placeholder="Enter your name*"
+          />
+          <input
+            class="order-input"
+            type="tel"
+            id="telClient"
+            placeholder="Enter your phone number*"
+          />
+        </div>
+        <!-- Food Items -->
+        <h3 class="order-titles">Food Choices</h3>
+        <div class="order-wrapper">
+          <div class="order-card">
+            <img src="images/i1.jpeg" alt="" class="order-image" />
+            <div class="order-detail">
+              <p style="font-size: 1.3em">mouthwatering burger</p>
+              <span style="color: black; font-size: x-large; font-weight: bold">
+                &times;</span
+              >
+              <input type="number" value="0" />
+            </div>
+            <h4 class="order-price">12 dt</h4>
+          </div>
+          <div class="order-card">
+            <img src="images/i2.jpg" alt="" class="order-image" />
+            <div class="order-detail">
+              <p style="font-size: 1.3em">Tacos</p>
+              <span style="color: black; font-size: x-large; font-weight: bold">
+                &times;</span
+              >
+              <input type="number" value="0" />
+            </div>
+            <h4 class="order-price">8 dt</h4>
+          </div>
+          <div class="order-card">
+            <img src="images/i3.jpg" alt="" class="order-image" />
+            <div class="order-detail">
+              <p style="font-size: 1.3em">irresistible pizzas</p>
+              <span style="color: black; font-size: x-large; font-weight: bold">
+                &times;</span
+              >
+              <input type="number" value="0" />
+            </div>
+            <h4 class="order-price">13 dt</h4>
+          </div>
+          <div class="order-card">
+            <img src="images/i4.jpg" alt="" class="order-image" />
+            <div class="order-detail">
+              <p style="font-size: 1.3em">delectable sandwiche</p>
+              <span style="color: black; font-size: x-large; font-weight: bold">
+                &times;</span
+              >
+              <input type="number" value="0" />
+            </div>
+            <h4 class="order-price">7 dt</h4>
+          </div>
+          <div class="order-card">
+            <img src="images/i5.jpg" alt="" class="order-image" />
+            <div class="order-detail">
+              <p style="font-size: 1.3em">Crispy chicken</p>
+              <span style="color: black; font-size: x-large; font-weight: bold">
+                &times;</span
+              >
+              <input type="number" value="0" />
+            </div>
+            <h4 class="order-price">17 dt</h4>
+          </div>
+          <div class="order-card">
+            <img src="images/i6.jpg" alt="" class="order-image" />
+            <div class="order-detail">
+              <p style="font-size: 1.3em">nutritious salad</p>
+              <span style="color: black; font-size: x-large; font-weight: bold">
+                &times;</span
+              >
+              <input type="number" value="0" />
+            </div>
+            <h4 class="order-price">8.5 dt</h4>
+          </div>
+        </div>
+        <!-- Supplement Choices -->
+        <h3 class="order-titles">Supplements</h3>
+        <div>
+          <label class="order-choice"
+            ><input type="checkbox" name="supplement" value="sauce" />
+            Sauce</label
+          >
+          <label class="order-choice"
+            ><input type="checkbox" name="supplement" value="cheese" />
+            Cheese</label
+          >
+          <label class="order-choice"
+            ><input type="checkbox" name="supplement" value="fries" />
+            Fries</label
+          >
+        </div>
+
+        <!-- Drink Choices -->
+        <h3 class="order-titles">Drink Choices</h3>
+        <div>
+          <label class="order-choice"
+            ><input type="checkbox" name="drink" value="cola" /> Cola</label
+          >
+          <label class="order-choice"
+            ><input type="checkbox" name="drink" value="orangeJuice" /> Orange
+            Juice</label
+          >
+          <label class="order-choice"
+            ><input type="checkbox" name="drink" value="water" /> Water</label
+          >
+        </div>
+        <hr class="divider" />
+        <div class="order-total">
+          <p style="font-size: 1.5em; font-weight: bold;">Subtotal <span>23 dt</span></p>
+        </div>
+        <!-- Order Button -->
+        <button type="submit" onclick="closeModal()" class="btn">Order Now</button>
+        <!-- </div> -->
+      </div>
+    </div>
     <div class="banner">
       <video autoplay loop muted plays-inline>
-        <source src="images/video.mp4" type="video/mp4">
+        <source src="images/video.mp4" type="video/mp4" />
       </video>
-        <header class="header">
-      <a href="#" class="logo"><img src="images/logo.png" alt="Site logo" ></a>
-      <i class="bx bx-menu" id="menu-icon"></i>
-      <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Menu</a>
-        <a href="#contact">Contact</a>
-        <a href="#order" class="btn">Order your meal</a>
-      </nav>
-    </header>
+      <header class="header">
+        <a href="#" class="logo"
+          ><img src="images/logo.png" alt="Site logo"
+        /></a>
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <nav class="navbar">
+          <a href="#home" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Menu</a>
+          <a href="#contact">Contact</a>
+          <a href="#order" onclick="openModal()" class="btn">Order your meal</a>
+        </nav>
+      </header>
 
-    <section class="home" id="home" >
-      <div class="home-content">
-        <h3>Hello, 👋 Welcome</h3>
-        <h1>Your favorite place for delicious meals</h1>
-        <h3>like <span class="multiple-text"></span></h3>
-      </div>
-    </section>
-
+      <section class="home" id="home">
+        <div class="home-content">
+          <h3>Hello, 👋 Welcome</h3>
+          <h1>Your favorite place for delicious meals</h1>
+          <h3>like <span class="multiple-text"></span></h3>
+        </div>
+      </section>
     </div>
-    
+
     <section class="about" id="about">
       <div class="about-img">
-      <video autoplay loop muted plays-inline style="width: 70%; height:70%; ">
-        <source src="images/video2.mp4" type="video/mp4" >
-      </video>
+        <video autoplay loop muted plays-inline style="width: 70%; height: 70%">
+          <source src="images/video2.mp4" type="video/mp4" />
+        </video>
       </div>
       <div class="about-content">
-        <h2  class="heading" style="margin-bottom: 1em;">About <span> Us </span></h2>
-        <h3> Ha'food Restaurant</h3>
-        <p>
-          A wide range of <span>sandwiches </span>and <span>pizzas
-        </p>
-        <a href="#order" class="btn">Order your meal</a>
+        <h2 class="heading" style="margin-bottom: 1em">
+          About <span> Us </span>
+        </h2>
+        <h3>Ha'food Restaurant</h3>
+        <p>A wide range of <span>sandwiches </span>and <span>pizzas</span></p>
+        <a href="#order" onclick="openModal()" class="btn">Order your meal</a>
       </div>
     </section>
 
     <section class="services" id="services">
       <h2 class="heading">Our <span>Services</span></h2>
       <div class="services-container">
-        <a class="services-box" href="#order" style="text-decoration: none; color:#fff ;" >
-        <!-- <div class="services-box"> -->
-             <i class="fa fa-cart-plus custom-cart "></i>
+        <a
+          class="services-box"
+          href="#order"
+          onclick="openModal()"
+          style="text-decoration: none; color: #fff"
+        >
+          <!-- <div class="services-box"> -->
+          <i class="fa fa-cart-plus custom-cart"></i>
           <h3 class="service-title">Online Order</h3>
-          <p >
-            Save time and skip the lines by ordering our delicious food online now, then simply pick it up when it's ready.
+          <p>
+            Save time and skip the lines by ordering our delicious food online
+            now, then simply pick it up when it's ready.
           </p>
-          
-        <!-- </div> -->
-      </a>
-       
+
+          <!-- </div> -->
+        </a>
 
         <div class="services-box">
           <i class="fas fa-utensils custom-cart"></i>
-                    <h3 class="service-title">Quality food</h3>
+          <h3 class="service-title">Quality food</h3>
           <p>
-            Fresh ingredients, skilled hands, and a dash of love go into crafting each meal you purchase.
+            Fresh ingredients, skilled hands, and a dash of love go into
+            crafting each meal you purchase.
           </p>
-        </div> 
-        
+        </div>
+
         <div class="services-box">
           <i class="fa-solid fa-headset custom-cart"></i>
-                    <h3 class="service-title">24/7 Service</h3>
+          <h3 class="service-title">24/7 Service</h3>
           <p>
-            Feeling hungry with no food in sight? Don't worry, we've got you covered with our 24/7 service!
+            Feeling hungry with no food in sight? Don't worry, we've got you
+            covered with our 24/7 service!
           </p>
         </div>
       </div>
@@ -97,90 +241,111 @@
     <section class="portfolio" id="portfolio">
       <h2 class="heading">Our <span>Menu</span></h2>
       <div class="portfolio-container">
-        <!-- <div class="portfolio-box"> -->
-          <a class="portfolio-box" href="#order" style="text-decoration: none; color:#fff ;">
+        <a
+          class="portfolio-box"
+          href="#order"
+          style="text-decoration: none; color: #fff"
+        >
           <img src="images/i1.jpeg" alt="" id="portfolioImage_SPF" />
           <div class="portfolio-layer">
             <h4>Burger</h4>
             <p>
-              Indulge in our mouthwatering burgers for a satisfying bite every time.
+              Indulge in our mouthwatering burgers for a satisfying bite every
+              time.
             </p>
           </div>
-          </a>
-        <!-- </div> -->
+        </a>
 
-        <!-- <div class="portfolio-box"> -->
-          <a  class="portfolio-box" href="#order" style="text-decoration: none; color:#fff ;">
+        <a
+          class="portfolio-box"
+          href="#order"
+          style="text-decoration: none; color: #fff"
+        >
           <img src="images/i2.jpg" alt="" id="portfolioImage_ATDEPA" />
           <div class="portfolio-layer">
             <h4>Tacos</h4>
             <p>
-              Indulge in our flavorful tacos, filled with savory meats, fresh toppings, and zesty sauces for a taste of authentic Mexican cuisine.
+              Indulge in our flavorful tacos, filled with savory meats, fresh
+              toppings, and zesty sauces for a taste of authentic Mexican
+              cuisine.
             </p>
           </div>
-          </a>
-        <!-- </div> -->
-        <!-- <div class="portfolio-box"> -->
-          <a class="portfolio-box" href="#order" style="text-decoration: none; color:#fff ;">
+        </a>
+        <a
+          class="portfolio-box"
+          href="#order"
+          style="text-decoration: none; color: #fff"
+        >
           <img src="images/i3.jpg" alt="" id="portfolioImage_Intern" />
-            <div class="portfolio-layer">
-              <h4>Pizza</h4>
-              <p>
-                Indulge in our irresistible pizzas, with melted cheese for an extra cheesy delight that's sure to satisfy.
-              </p>
-            </div>
-            </a>
-          <!-- </div> -->
+          <div class="portfolio-layer">
+            <h4>Pizza</h4>
+            <p>
+              Indulge in our irresistible pizzas, with melted cheese for an
+              extra cheesy delight that's sure to satisfy.
+            </p>
+          </div>
+        </a>
 
-        <!-- <div class="portfolio-box" > -->
-          <a class="portfolio-box" href="#order" style="text-decoration: none; color:#fff ;">
-             <img src="images/i4.jpg" alt="" id="portfolioImage_HAICOP" />
+        <a
+          class="portfolio-box"
+          href="#order"
+          style="text-decoration: none; color: #fff"
+        >
+          <img src="images/i4.jpg" alt="" id="portfolioImage_HAICOP" />
           <div class="portfolio-layer">
             <h4>Sandwiche</h4>
             <p>
-              Savor our delectable sandwiches, filled with premium ingredients, fresh bread for a satisfying meal on the go.
+              Savor our delectable sandwiches, filled with premium ingredients,
+              fresh bread for a satisfying meal on the go.
             </p>
           </div>
-          </a>
-         
-        <!-- </div> -->
+        </a>
 
-        <!-- <div class="portfolio-box"> -->
-          <a class="portfolio-box" href="#order" style="text-decoration: none; color:#fff ;">
+        <a
+          class="portfolio-box"
+          href="#order"
+          style="text-decoration: none; color: #fff"
+        >
           <img src="images/i6.jpg" alt="" id="portfolioImage_Resto" />
           <div class="portfolio-layer">
             <h4>Salad</h4>
             <p>
-              Enjoy fresh, nutritious salads packed with crisp lettuce, vibrant veggies, and protein-rich toppings, ideal for a satisfying yet lighter meal option.
+              Enjoy fresh, nutritious salads packed with crisp lettuce, vibrant
+              veggies, and protein-rich toppings, ideal for a satisfying yet
+              lighter meal option.
             </p>
           </div>
-          </a>
-        <!-- </div> -->
-        <!-- <div class="portfolio-box"> -->
-          <a  class="portfolio-box" href="#order" style="text-decoration: none; color:#fff ;">
+        </a>
+        <a
+          class="portfolio-box"
+          href="#order"
+          style="text-decoration: none; color: #fff"
+        >
           <img src="images/i5.jpg" alt="" id="portfolioImage_Menu" />
           <div class="portfolio-layer">
             <h4>Crispy chicken</h4>
             <p>
-              Crispy chicken and golden fries perfectly seasoned for an irresistible taste.
+              Crispy chicken and golden fries perfectly seasoned for an
+              irresistible taste.
             </p>
           </div>
-          </a>
-      <!-- </div> -->
+        </a>
+      </div>
     </section>
 
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Us!</span></h2>
       <form id="contact-form">
         <div class="input-box">
-          <input type="text" id="fullname" placeholder="Full Name"  required/>
-          <input type="email" id="email" placeholder="Email Address"  required/>
+          <input type="text" id="fullname" placeholder="Full Name" required />
+          <input type="email" id="email" placeholder="Email Address" required />
         </div>
         <textarea
           id="message"
           cols="30"
           rows="10"
-          placeholder="Your Message" required
+          placeholder="Your Message"
+          required
         ></textarea>
         <input type="submit" value="Send Message" class="btn" />
       </form>
@@ -188,9 +353,16 @@
 
     <footer class="footer">
       <div class="footer-text">
-        <p><a href="https://www.google.com/maps/place/Restaurant+Hafood/@36.899151,10.18405,10z/data=!4m16!1m9!3m8!1s0x12e2cb770121f36f:0x8d424d03df595d3d!2sRestaurant+Hafood!8m2!3d36.8991506!4d10.1840502!9m1!1b1!16s%2Fg%2F11cp5vnl5b!3m5!1s0x12e2cb770121f36f:0x8d424d03df595d3d!8m2!3d36.8991506!4d10.1840502!16s%2Fg%2F11cp5vnl5b?hl=en-GB&entry=ttu" target="_blank" style="text-decoration: none; color: #fff;">la petite ariana, Ariana Tunisia, Tunisia</a> <br><br>
-         <span>Phone:</span>  +216 50070999 </p> 
-         
+        <p>
+          <a
+            href="https://www.google.com/maps/place/Restaurant+Hafood/@36.899151,10.18405,10z/data=!4m16!1m9!3m8!1s0x12e2cb770121f36f:0x8d424d03df595d3d!2sRestaurant+Hafood!8m2!3d36.8991506!4d10.1840502!9m1!1b1!16s%2Fg%2F11cp5vnl5b!3m5!1s0x12e2cb770121f36f:0x8d424d03df595d3d!8m2!3d36.8991506!4d10.1840502!16s%2Fg%2F11cp5vnl5b?hl=en-GB&entry=ttu"
+            target="_blank"
+            style="text-decoration: none; color: #fff"
+            >la petite ariana, Ariana Tunisia, Tunisia</a
+          >
+          <br /><br />
+          <span>Phone:</span> +216 50070999
+        </p>
       </div>
       <div class="footer-text">
         <div class="social-media">
@@ -200,10 +372,37 @@
           <a href="https://www.instagram.com/ha__food" target="_blank"
             ><i class="bx bxl-instagram-alt"></i
           ></a>
-        </div><br>
-        <p id="copyright">© Copyright <span>Ha'food </span> Tous les droits sont réservés.</p>
+        </div>
+        <br />
+        <p id="copyright">
+          © Copyright <span>Ha'food </span> Tous les droits sont réservés.
+        </p>
       </div>
     </footer>
+
+    <script>
+      function openModal() {
+        // Display the modal
+        document.getElementById("myModal").style.display = "block";
+
+        // Load data into the modal (replace this with your actual data)
+        var modalData = "";
+        document.getElementById("modalData").innerHTML = modalData;
+      }
+
+      function closeModal() {
+        // Close the modal
+        document.getElementById("myModal").style.display = "none";
+      }
+
+      // Close the modal if the user clicks outside of it
+      window.onclick = function (event) {
+        var modal = document.getElementById("myModal");
+        if (event.target == modal) {
+          closeModal();
+        }
+      };
+    </script>
 
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
@@ -214,17 +413,32 @@
     <script src="js/script.js"></script>
 
     <!-- Start of ChatBot (www.chatbot.com) code -->
-<script type="text/javascript">
-  window.__be = window.__be || {};
-  window.__be.id = "65ecba3ba25275000719bad5";
-  (function() {
-      var be = document.createElement('script'); be.type = 'text/javascript'; be.async = true;
-      be.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.chatbot.com/widget/plugin.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(be, s);
-  })();
-</script>
-<noscript>You need to <a href="https://www.chatbot.com/help/chat-widget/enable-javascript-in-your-browser/" rel="noopener nofollow">enable JavaScript</a> in order to use the AI chatbot tool powered by <a href="https://www.chatbot.com/" rel="noopener nofollow" target="_blank">ChatBot</a></noscript>
-<!-- End of ChatBot code -->
-
+    <script type="text/javascript">
+      window.__be = window.__be || {};
+      window.__be.id = "65ecba3ba25275000719bad5";
+      (function () {
+        var be = document.createElement("script");
+        be.type = "text/javascript";
+        be.async = true;
+        be.src =
+          ("https:" == document.location.protocol ? "https://" : "http://") +
+          "cdn.chatbot.com/widget/plugin.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(be, s);
+      })();
+    </script>
+    <noscript
+      >You need to
+      <a
+        href="https://www.chatbot.com/help/chat-widget/enable-javascript-in-your-browser/"
+        rel="noopener nofollow"
+        >enable JavaScript</a
+      >
+      in order to use the AI chatbot tool powered by
+      <a href="https://www.chatbot.com/" rel="noopener nofollow" target="_blank"
+        >ChatBot</a
+      ></noscript
+    >
+    <!-- End of ChatBot code -->
   </body>
 </html>
