@@ -385,10 +385,28 @@
         // Display the modal
         document.getElementById("myModal").style.display = "block";
 
-        // Load data into the modal (replace this with your actual data)
-        var modalData = "";
-        document.getElementById("modalData").innerHTML = modalData;
-      }
+          // Reset input fields and other data in the modal
+  document.getElementById("clientName").value = "";
+  document.getElementById("telClient").value = "";
+
+  // Reset food items
+  var foodInputs = document.querySelectorAll('.order-wrapper input[type="number"]');
+  foodInputs.forEach(function (input) {
+    input.value = 0;
+  });
+
+  // Uncheck supplements
+  var supplementCheckboxes = document.querySelectorAll('input[name="supplement"]');
+  supplementCheckboxes.forEach(function (checkbox) {
+    checkbox.checked = false;
+  });
+
+  // Uncheck drinks
+  var drinkCheckboxes = document.querySelectorAll('input[name="drink"]');
+  drinkCheckboxes.forEach(function (checkbox) {
+    checkbox.checked = false;
+  });
+}
 
       function closeModal() {
         // Close the modal
